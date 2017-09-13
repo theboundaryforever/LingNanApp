@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/teacher_login_bg">
+
+    <ScrollView
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/margin_size_12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/lingnan_logo" />
+
+            <EditText
+                android:id="@+id/et_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/login_zhanghao"
+                android:drawablePadding="20dp"
+                android:hint="账号"
+                android:inputType="textPersonName"
+                android:paddingBottom="@dimen/margin_size_12"
+                android:paddingTop="@dimen/margin_size_12"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/font_size_18">
+
+                <requestFocus />
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="-1dp"
+                android:background="@color/white" />
+
+            <EditText
+                android:id="@+id/et_passWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/login_password"
+                android:drawablePadding="20dp"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:paddingBottom="@dimen/margin_size_12"
+                android:paddingTop="@dimen/margin_size_12"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/font_size_18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_size_20"
+                android:layout_marginTop="@dimen/margin_size_20"
+                android:orientation="horizontal">
+
+                <com.haoyu.app.view.AppCheckBox
+                    android:id="@+id/appCheckBox"
+                    android:layout_width="@dimen/margin_size_20"
+                    android:layout_height="@dimen/margin_size_20"
+                    android:layout_gravity="center"
+                    app:color_checked="@color/white"
+                    app:color_tick="@color/defaultColor"
+                    app:color_unchecked="@color/white"
+                    app:stroke_width="@dimen/margin_size_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_size_6"
+                    android:text="记住密码"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_18" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_login_background"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_18" />
+
+            <TextView
+                android:id="@+id/forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:text="忘记密码？"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

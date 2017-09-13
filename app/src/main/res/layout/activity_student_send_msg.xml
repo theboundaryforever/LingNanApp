@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/spaceColor"
+    android:orientation="vertical">
+
+    <com.haoyu.app.view.AppToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_button_image="@drawable/app_back"
+        app:right_button_textColor="@color/white"
+        app:show_right_button="true"
+        app:right_button_text="发送"
+        app:title_text="发送消息" />
+
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_size_10"
+        android:layout_marginRight="@dimen/margin_size_10"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:background="@color/white"
+        android:hint="向学员发送消息"
+        android:gravity="top|left|center"
+        android:minLines="7"
+        android:paddingBottom="@dimen/margin_size_10"
+        android:paddingLeft="@dimen/margin_size_10"
+        android:paddingRight="@dimen/margin_size_10"
+        android:paddingTop="@dimen/margin_size_20"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/font_size_16" />
+
+
+</LinearLayout>

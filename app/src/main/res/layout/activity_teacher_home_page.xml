@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spaceColor">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultColor">
+
+        <ImageView
+            android:id="@+id/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_title"
+            android:layout_alignTop="@+id/tv_title"
+            android:layout_centerVertical="true"
+            android:background="@drawable/app_toolbar_selector"
+            android:paddingLeft="@dimen/margin_size_16"
+            android:paddingRight="@dimen/margin_size_16"
+            android:src="@drawable/dazhangjie" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/title_padding"
+            android:text="教学"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_textsize" />
+
+        <ImageView
+            android:id="@+id/iv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_title"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_title"
+            android:paddingLeft="@dimen/margin_size_16"
+            android:paddingRight="@dimen/margin_size_16"
+            android:src="@drawable/xiaoxi"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_title"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_title"
+            android:layout_toLeftOf="@+id/iv_msg"
+            android:paddingLeft="@dimen/margin_size_16"
+            android:paddingRight="@dimen/margin_size_16"
+            android:src="@drawable/shaoshao"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <com.haoyu.app.view.LoadingView
+        android:id="@+id/loadingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <com.haoyu.app.view.LoadFailView
+        android:id="@+id/loadFailView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/empty_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="@dimen/margin_size_10"
+        android:drawableTop="@drawable/empty_list"
+        android:gravity="center"
+        android:text="暂无相关信息"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/font_size_18"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="@dimen/margin_size_12"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/biaotiyuan"
+                android:drawablePadding="@dimen/margin_size_6"
+                android:padding="@dimen/margin_size_12"
+                android:text="你参与辅导的课程"
+                android:textSize="@dimen/font_size_18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_1"
+                android:background="@color/spaceColor" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/courseRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/empty_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_size_30"
+                android:drawableLeft="@drawable/empty_course"
+                android:drawablePadding="@dimen/margin_size_16"
+                android:gravity="center"
+                android:text="暂无参与辅导的课程"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_size_16"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_1"
+                android:background="@color/spaceColor" />
+
+            <TextView
+                android:id="@+id/workshop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/biaotiyuan"
+                android:drawablePadding="@dimen/margin_size_6"
+                android:padding="@dimen/margin_size_12"
+                android:text="你参与管理的工作坊"
+                android:textSize="@dimen/font_size_18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_1"
+                android:background="@color/spaceColor" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/workshopRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/empty_workshop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_size_30"
+                android:drawableLeft="@drawable/empty_course"
+                android:drawablePadding="@dimen/margin_size_16"
+                android:gravity="center"
+                android:text="暂无参与管理的工作坊"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_size_16"
+                android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

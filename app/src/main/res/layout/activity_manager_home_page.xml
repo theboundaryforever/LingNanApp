@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultColor">
+
+        <ImageView
+            android:id="@+id/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_title"
+            android:layout_alignTop="@+id/tv_title"
+            android:layout_centerVertical="true"
+            android:background="@drawable/app_toolbar_selector"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/dazhangjie" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="监测"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_title"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_title"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/xiaoxi" />
+
+        <ImageView
+            android:id="@+id/scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_title"
+            android:layout_alignTop="@+id/tv_title"
+            android:layout_toLeftOf="@+id/iv_msg"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/shaoshao"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_myTrain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="16dp"
+        android:drawableRight="@drawable/course_dictionary_xiala"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/spaceColor"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rb_train_monitor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/train_monitor_selector"
+            android:gravity="center"
+            android:text="培训监测"
+            android:textColor="@color/tab_train_textcolor" />
+
+        <RadioButton
+            android:id="@+id/rb_train_student_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/train_student_score_selector"
+            android:gravity="center"
+            android:text="学员成绩"
+            android:textColor="@color/tab_train_textcolor" />
+
+        <RadioButton
+            android:id="@+id/rb_train_train_process"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/train_process_selector"
+            android:gravity="center"
+            android:text="过程监测"
+            android:textColor="@color/tab_train_textcolor" />
+
+        <RadioButton
+            android:id="@+id/rb_train_projectbrief"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/train_projectbrief_selector"
+            android:gravity="center"
+            android:text="项目简报"
+            android:textColor="@color/tab_train_textcolor" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

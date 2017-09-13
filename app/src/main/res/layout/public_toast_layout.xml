@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_size_30"
+        android:layout_marginRight="@dimen/margin_size_30"
+        android:background="@drawable/toast_background"
+        android:paddingBottom="@dimen/margin_size_10"
+        android:paddingLeft="@dimen/margin_size_16"
+        android:paddingRight="@dimen/margin_size_16"
+        android:paddingTop="@dimen/margin_size_10" >
+
+        <TextView
+            android:id="@+id/chapterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="此操作需在网络下进行！"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/operationTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chapterName"
+            android:layout_marginTop="@dimen/margin_size_8"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="请开启数据或连接WIFI！"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_15"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

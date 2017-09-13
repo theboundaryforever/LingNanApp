@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spaceColor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultColor"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/tv_title"
+            android:layout_alignTop="@+id/tv_title"
+            android:layout_centerVertical="true"
+            android:background="@drawable/app_toolbar_selector"
+            android:paddingLeft="@dimen/back_padding"
+            android:paddingRight="@dimen/back_padding"
+            android:src="@drawable/app_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:padding="@dimen/title_padding"
+            android:text="编辑简报"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_textsize" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_title"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_title"
+            android:background="@drawable/app_toolbar_selector"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_size_12"
+            android:paddingRight="@dimen/margin_size_12"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_16"
+        android:background="@color/white"
+        android:drawableRight="@drawable/download_more"
+        android:gravity="top|left|center"
+        android:hint="简报标题（必填）"
+        android:maxLines="1"
+        android:maxLength="100"
+        android:padding="@dimen/margin_size_12"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/font_size_16">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_16"
+        android:background="#ffffffff"
+        android:gravity="top|left|center"
+        android:hint="简报内容（必填）"
+        android:maxLength="4000"
+        android:minLines="8"
+        android:maxLines="10"
+        android:padding="@dimen/margin_size_10"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/font_size_16" />
+</LinearLayout>
